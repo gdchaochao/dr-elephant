@@ -372,7 +372,7 @@ if hash npm 2>/dev/null; then
   cd ${ember_web_directory}
 
   npm install
-  node_modules/bower/bin/bower install
+  node_modules/bower/bin/bower install --allow-root
   node_modules/ember-cli/bin/ember build --prod
   rm -r ${ember_resources_dir} 2> /dev/null
   mkdir ${ember_resources_dir}
