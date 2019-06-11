@@ -45,8 +45,8 @@ object Dependencies {
     sparkVersion = System.getProperties.getProperty(SPARK_VERSION)
   }
 
-  val sparkExclusion = if (sparkVersion >= "1.5.0") {
-    "org.apache.spark" % "spark-core_2.10" % sparkVersion excludeAll(
+  val sparkExclusion = if (sparkVersion >= "2.4.0") {
+    "org.apache.spark" % "spark-core_2.12" % sparkVersion excludeAll(
       ExclusionRule(organization = "com.typesafe.akka"),
       ExclusionRule(organization = "org.apache.avro"),
       ExclusionRule(organization = "org.apache.hadoop"),
